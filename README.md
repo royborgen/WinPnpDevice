@@ -1,4 +1,4 @@
-# BWin_PnpDevice_Disable_Enable
+# Win_PnpDevice_Disable_Enable
 Win_PnpDevice_Disable_Enable is a Powershell script that enables and disables Plug and Play devices in Windows. 
 
 ## Usage
