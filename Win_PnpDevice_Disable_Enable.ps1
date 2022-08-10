@@ -11,10 +11,22 @@ foreach ($deviceId in $pnpId) {
   	#If parameter is enable, enable the device
 	if ($action -eq "enable") {
 		Write-Host "Enabling device $deviceId";  Enable-PnpDevice -InstanceId $deviceId -Confirm:$false;
-	}
- 	#if parameter is disable, disable the device
-	if ($action -eq "disable") {
+	#if parameter is disable, disable the device
+	}elseif ($action -eq "disable") {
 		Write-Host "Disabling device $deviceId";  Disable-PnpDevice -InstanceId $deviceId -Confirm:$false;
+	}else {
+		#get status of the device
+		$device = Get-PnpDevice -InstanceId $deviceId -ErrorAction SilentlyContinue
+		if ($device) {
+    			switch ($device.Status) {
+				#if status is ok, disable it
+        			'OK'    { Write-Host "Disabling device $deviceId"; Disable-PnpDevice -InstanceId $deviceId -Confirm:$false; break }
+        			#if status is default, enable it
+				default { Write-Host "Enabling device $deviceId";  Enable-PnpDevice -InstanceId $deviceId -Confirm:$false }
+    			}
+		}else {
+			#wite a waring if device ID is not found
+    			Write-Warning "Device with ID '$deviceId' not found"
+		}
 	}
-	
 }
