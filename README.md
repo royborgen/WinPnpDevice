@@ -11,7 +11,7 @@ You can also provide the parameter action 'enabled or action 'disabled as shown 
 ```
 
 ## Needed modifications
-Array $pnpId needs to be altered to contain deviceID 'HID\VID_044F&PID_0402\7&447A713&0&0000', 'HID\VID_044F&PID_0404\7&378B9D2&0&0000'
+Array $pnpId needs to be altered so it contain the deviceID of the device you wish enable or disable 
 ```
 $pnpId = 'HID\VID_044F&PID_0402\7&447A713&0&0000', 'HID\VID_044F&PID_0404\7&378B9D2&0&0000'
 ```
