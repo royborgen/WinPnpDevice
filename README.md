@@ -15,3 +15,8 @@ Array $pnpId needs to be altered so it contain the deviceID of the device you wi
 ```
 $pnpId = 'HID\VID_044F&PID_0402\7&447A713&0&0000', 'HID\VID_044F&PID_0404\7&378B9D2&0&0000'
 ```
+Devicve ID can be found in Windows Device Manager:
+1. Right click on the device and choose "Properties"
+2. Choose "Details"
+3. Under Property choose "Device Instance Path"
+4. Right click on the value and choose copy
