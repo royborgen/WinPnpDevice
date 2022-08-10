@@ -6,5 +6,5 @@ The script runs with and without parameter. If no parameter is submittet it will
 
 You can also provide argument action 'enabled or action 'disabled as shown bellow: 
 ```
-Win_PnpDevice_Disable_Enable.ps1 -action 'disable' 
-Win_PnpDevice_Disable_Enable.ps1 -action 'enable' 
+./Win_PnpDevice_Disable_Enable.ps1 -action 'disable' 
+./Win_PnpDevice_Disable_Enable.ps1 -action 'enable' 
