@@ -28,7 +28,7 @@ foreach ($deviceId in $pnpId) {
     			}
 		}
 	}else {
-		#wite a waring if device ID is not found
+		#write a waring if device ID is not found
     		Write-Warning "Device with ID '$deviceId' not found"
 	}
 }
